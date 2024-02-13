@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,800;6..12,1000&display=swap');
+
+@import "./styles/Variables.scss";
+
+html{
+    font-size: 62.5%;
+    // font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: $bg-color;
+    color: $white-font;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}

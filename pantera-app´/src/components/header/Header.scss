@@ -1,0 +1,85 @@
+@import "/src/styles/Variables.scss";
+
+.header{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem ;
+    justify-content: space-between;
+
+    .header-title{
+        font-size: $title-font-size;
+        font-weight: 1000;
+    }
+
+    .change-input{
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        width: 10rem;
+        position: relative;
+        cursor: pointer;
+        .changer{
+            position: absolute;
+            border-radius: 100%;
+            height: 5rem;
+            width: 5rem;
+            transition: all ease-in 0.25s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-size: 95%;
+        }
+        .left{
+            transform: translateX(0);
+            background-color: $green-tone;
+            background-image: url("/src/assets/images/1pel.png");
+        }
+        .right{
+            background-color: $blue-tone;
+            transform: translateX(100%);
+            background-image: url("/src/assets/images/2pel2.png");
+        }
+        .sizeanimation{
+            animation: sizeanimation 0.25s ease-in;
+        }
+        .background{
+            margin: 0 auto;
+            width: 90%;
+            height: 3rem;
+            border-radius: 4rem;
+            transition: background-color 0.25s ease;
+            background-color: $white-font;
+        }
+        .green{
+            background-color: $green-tone;
+        }
+        .blue{
+            background-color: $blue-tone;
+        }
+        .image{
+            width: 95%;
+        }
+    }
+}
+
+
+
+@keyframes sizeanimation {
+    0%{
+        height: 5rem;
+    }
+    // 25%{
+    //     height: 1rem;
+    // }
+    50%{
+        height: 3rem;
+    }
+    // 75%{
+    //     height: 1rem;
+    // }
+    100% {
+        height: 5rem;
+    }
+}

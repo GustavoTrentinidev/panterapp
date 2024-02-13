@@ -1,0 +1,8 @@
+@import "/src/styles/Variables.scss";
+
+.home-app{
+    height: 100vh;
+    background-color: $bg-color;
+    color: $white-font;
+    font-size: $normal-font-size;
+}

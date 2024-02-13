@@ -1,0 +1,59 @@
+@import "/src/styles/Variables.scss";
+
+.squadmaterial{
+    .squad-title{
+        font-size: $subtitle-font-size;
+        padding: 1rem;
+        .squad-name{
+            font-weight: 1000;
+            font-size: 5rem;
+        }
+    }
+    .divider{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        .line{
+            width: 90%;
+        }
+
+    }
+    .materials{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        .material-item{
+            font-size: 1.5rem;
+            width: 75%;
+            .material-name{
+                font-size: 2rem;
+                text-align: center;
+            }
+    
+            .material-amount{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                .material-amount-bar-outside{
+                    width: 75%;
+                    background-color: white;
+                    height: 1.8rem;
+                    border-radius: 2rem;
+                    padding: .1rem;
+                    box-sizing: border-box;
+                    .material-amount-bar-inside{
+                        width: 5rem;
+                        height: 100%;
+                        border-radius: 2rem;
+                        transition: all .5s ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
