@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["relationJoins"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// yarn prisma migrate dev
+
+model Militar {
+  id Int @id @default(autoincrement())
+  name String
+  graduation String
+  material Militar_Material[]
+  @@map("militares")
+}
+
+model Militar_Material {
+  id Int @id @default(autoincrement())
+  military Militar @relation(fields: [militarID], references: [id])
+  militarID Int
+  material Material @relation(fields: [materialID], references: [id])
+  materialID Int
+  quantity Int
+  @@map("militar_material")
+}
+
+model Material {
+  id Int @id @default(autoincrement())
+  name String
+  militares Militar_Material[]
+  total_quantity Int
+  current_quantity Int @default(dbgenerated("total_quantity"))
+  squad Squad @relation(fields: [squadID], references: [id])
+  squadID Int
+  @@map("materials")
+}
+
+
+model Squad{
+  id Int @id @default(autoincrement())
+  materials Material[] 
+  name String
+  @@map("squads")    
+}

@@ -1,0 +1,20 @@
+{
+  "name": "pantera-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.9.1",
+    "express": "^4.18.2",
+    "prisma": "^5.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
