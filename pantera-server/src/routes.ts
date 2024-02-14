@@ -6,6 +6,7 @@ import { ListMaterialBySquad } from './controllers/materials/ListMaterialBySquad
 import { CreateMilitarController } from './controllers/militar/CreateMilitarController';
 import { GetMilitarController } from './controllers/militar/GetMilitarController';
 import { LendMaterialController } from './controllers/militar/LendMaterialController';
+import { ReturnMaterialController } from './controllers/militar/ReturnMaterialController';
 
 const router = Router()
 
@@ -24,5 +25,6 @@ router.get("/militar/:id", new GetMilitarController().handle)
 router.get("/militar/:id", new GetMilitarController().handle)
 
 router.post("/militar/lendmaterial", new LendMaterialController().handle)
+router.post("/militar/returnmaterial", new ReturnMaterialController().handle)
 
 export {router}
